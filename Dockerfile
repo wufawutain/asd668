@@ -6,6 +6,7 @@ RUN userdel -r ubuntu 2>/dev/null || true
 
 # Install dependencies with disable root login for security reasons
 RUN apt-get update \
+    && apt-get install -y tmux\
     && apt-get install -y g++\
     && apt-get install -y zip\
     && apt-get install -y curl\
